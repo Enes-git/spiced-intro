@@ -1,3 +1,4 @@
+// 1:
 function logType(arg) {
     if (typeof arg == "number") {
         if (isNaN(arg)) {
@@ -28,6 +29,7 @@ function logType(arg) {
     }
 }
 
+// 2:
 var a = {
     Berlin: "Germany",
     Paris: "France",
@@ -40,8 +42,9 @@ for (var i in a) {
     b[a[i]] = i;
 }
 
-//console.log(b)
+console.log(b);
 
+// 3:
 for (var i = 10; i >= 1; i--) {
     console.log(i);
 }
