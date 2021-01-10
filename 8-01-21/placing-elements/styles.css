@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .nav-bar {
@@ -11,10 +11,7 @@
 
 .nav-bar div {
     width: 50%;
-    height: 100%;
-    vertical-align: middle;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 5vh;
 }
 
 #logo {
@@ -27,10 +24,34 @@
 }
 
 #hamburger img {
-    max-width: 10%;
+    max-width: 25px;
 }
 
 #logo img {
-    max-width: 20%;
-    display: block;
+    max-width: 120px;
+}
+#home {
+    background-image: url("assets/spices.jpg");
+    text-align: center;
+    letter-spacing: 1px;
+}
+#home .container {
+    width: 100vw;
+    height: 100vh;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+}
+h2 {
+    color: #fff;
+    font-style: italic;
+    font-weight: 500;
+    font-size: larger;
+}
+button {
+    background-color: #ffff02;
+    color: #daa520;
+    border: 2px solid #daa520;
+    border-radius: 20px;
+    padding: 4px 15px;
+    text-justify: auto;
 }
