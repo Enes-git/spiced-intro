@@ -1,14 +1,14 @@
 * {
     box-sizing: border-box;
     font-family: Georgia, "Times New Roman", Times, serif;
-    margin-right: 2vw;
-    margin-left: 2vw;
 }
 
 header {
     height: 5vh;
     width: auto;
     background-color: #fff;
+    margin-right: 2vw;
+    margin-left: 2vw;
 }
 
 #logo {
@@ -27,6 +27,8 @@ header {
     letter-spacing: 1px;
     width: auto;
     height: auto;
+    margin-right: 2vw;
+    margin-left: 2vw;
 }
 
 #home .container {
@@ -67,49 +69,71 @@ button {
     padding-left: 2.8vw;
     padding-right: 2.8vw;
 }
-
+button:hover {
+    font-size: 2.5vw;
+    letter-spacing: normal;
+}
 #main-menu {
     width: auto;
-    height: 100vh;
-    padding-top: 4vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
+    height: 25vh;
+    padding-top: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
     background-color: #d3d3d3;
 }
 
 .main-menu-items {
-    /* display: inline-block; */
-    width: 50%;
-    margin: 0;
-    align-items: stretch;
+    position: relative;
+    width: 40%;
+}
+
+.left-sided {
+    margin-left: 8vw;
+    left: 0;
+    float: left;
+}
+.right-sided {
+    margin-right: 8vw;
+    float: right;
+}
+
+#classes {
+    top: 0;
+}
+
+#services {
+    top: 0;
+}
+
+#quality {
+    top: 10%;
+}
+
+#freedom {
+    top: 10%;
 }
 
 .main-menu-items img {
     max-width: 4vw;
     float: left;
     margin: 0;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
 }
-.main-menu-content {
-    float: left;
+
+.main-menu-content p {
+    font-size: 1.5vw;
     margin: 0;
+    margin-top: 0.5vw;
 }
-
-#classes,
-#quality {
-    float: left;
-}
-
-#services,
-#freedom {
-    float: right;
-}
-
 .main-menu-content h3 {
     font-weight: bolder;
     font-size: 2vw;
     margin: 0;
 }
-.main-menu-content p {
-    font-size: 1vw;
-    margin: 0;
+
+@media (prefers-color-scheme: dark) {
+    mainmenu {
+        background-color: #d3d3d3;
+    }
 }
