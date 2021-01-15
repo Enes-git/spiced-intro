@@ -2,7 +2,16 @@
     var videos = document.querySelector("#videos-container");
     var links = document.getElementsByTagName("a");
     var leftPosition = videos.offsetLeft;
+    var requestId;
 
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("mouseenter", function (event) {
+            cancelAnimationFrame(requestId);
+        });
+        links[i].addEventListener("mouseleave", function (event) {
+            requestAnimationFrame(moveLeftAnimation);
+        });
+    }
     function moveLeftAnimation() {
         leftPosition--;
 
@@ -12,12 +21,10 @@
             leftPosition += firstElementWidth;
 
             videos.appendChild(links[0]);
-            // videos.removeChild(links[0]);
-            // console.log(leftPosition);
         }
 
         videos.style.left = leftPosition.toString() + "px";
-        requestAnimationFrame(moveLeftAnimation);
+        requestId = requestAnimationFrame(moveLeftAnimation);
     }
 
     moveLeftAnimation();
