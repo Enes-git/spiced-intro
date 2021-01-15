@@ -10,12 +10,14 @@
 
         if (leftPosition == -firstElementWidth) {
             leftPosition += firstElementWidth;
+
+            videos.appendChild(links[0]);
+            videos.removeChild(links[0]);
             // console.log(leftPosition);
         }
 
-        requestAnimationFrame(moveLeftAnimation);
-
         videos.style.left = leftPosition.toString() + "px";
+        requestAnimationFrame(moveLeftAnimation);
     }
 
     moveLeftAnimation();
