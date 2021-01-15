@@ -9,6 +9,7 @@
         var firstElementWidth = links[0].offsetWidth;
 
         if (leftPosition == -firstElementWidth) {
+            leftPosition += firstElementWidth;
             // console.log(leftPosition);
         }
 
