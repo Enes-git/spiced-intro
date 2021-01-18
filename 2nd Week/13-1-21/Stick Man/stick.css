@@ -1,0 +1,57 @@
+.head {
+    height: 120px;
+    width: 120px;
+    border: 5px solid black;
+    position: relative;
+    top: 40px;
+    left: 350px;
+    border-radius: 50%;
+}
+
+.torso {
+    border: 3px solid black;
+    height: 360px;
+    width: 0;
+    position: relative;
+    top: -145px;
+    left: 415px;
+}
+
+.right-arm {
+    border: 3px solid black;
+    height: 175px;
+    width: 0;
+    position: relative;
+    top: 40px;
+    right: 465px;
+    float: right;
+    transform: rotate(45deg);
+}
+.left-arm {
+    border: 3px solid black;
+    height: 175px;
+    width: 0;
+    position: relative;
+    top: 40px;
+    left: 350px;
+    transform: rotate(-45deg);
+}
+.right-leg {
+    border: 3px solid black;
+    height: 200px;
+    width: 0;
+    position: relative;
+    top: -175px;
+    right: 455px;
+    transform: rotate(-45deg);
+    float: right;
+}
+.left-leg {
+    border: 3px solid black;
+    height: 200px;
+    width: 0;
+    position: relative;
+    top: -175px;
+    left: 343px;
+    transform: rotate(45deg);
+}
