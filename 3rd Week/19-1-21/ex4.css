@@ -1,0 +1,47 @@
+.flex-container {
+    display: flex;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+}
+
+.big {
+    height: 250px; /*when i set these into vw&vh they strech despite flex-start, why?*/
+    width: 250px;
+}
+
+.small {
+    height: 125px;
+    width: 125px;
+}
+
+#big1 {
+    justify-content: flex-end;
+    background-color: #808080;
+}
+#big2 {
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: #000000;
+}
+#big3 {
+    align-items: flex-end;
+    background-color: #0000ff;
+}
+#big4 {
+    background-color: #810082;
+}
+#small1 {
+    background-color: #ffa600;
+}
+#small2 {
+    background-color: #ffff00;
+}
+#small3 {
+    background-color: #008100;
+}
+#small4 {
+    background-color: #ffbfcb;
+}

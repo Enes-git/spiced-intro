@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: cadetblue;
+    height: 70px;
+    display: flex;
+}
+main {
+    flex-grow: 2;
+}
+
+footer {
+    background-color: darkcyan;
+    height: 30px;
+    display: flex;
+}
