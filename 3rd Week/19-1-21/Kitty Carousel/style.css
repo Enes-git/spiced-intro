@@ -16,13 +16,13 @@
     transform: translateX(100%);
 }
 
-.onscreen {
+.kitty-container img.onscreen {
     transform: translateX(0);
     transition-property: transform;
     transition-duration: 2s;
 }
 
-.exit {
+.kitty-container img.exit {
     transform: translateX(-100%);
     transition-property: transform;
     transition-duration: 2s;
