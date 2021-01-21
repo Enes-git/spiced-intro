@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+}
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 70px auto 30px;
+}
+
+header {
+    background-color: darkred;
+    height: 70px;
+}
+
+footer {
+    background-color: indianred;
+    height: 30px;
+}
