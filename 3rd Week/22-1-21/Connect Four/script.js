@@ -4,12 +4,14 @@
     $(".column").on("click", function (e) {
         var col = $(e.currentTarget);
         var slotsInCol = col.children();
+        // adding tokens
         for (var i = slotsInCol.length - 1; i >= 0; i--) {
             if (!slotsInCol.eq(i).hasClass("player1") && !slotsInCol.eq(i).hasClass("player2")) {
                 slotsInCol.eq(i).addClass(currentPlayer);
                 break;
             }
         }
+        // setting 0 as the limit for tokens
         if (i === -1) {
             return;
         }
@@ -61,7 +63,6 @@
         var slotsInRow = $(".row" + i);
         if (checkForVictory(slotsInCol)) {
             alert("The victor is " + currentPlayer + "!");
-            // if (confirm())
             reMatch();
         } else if (checkForVictory(slotsInRow)) {
             alert("The victor is " + currentPlayer + "!");
@@ -71,6 +72,7 @@
 
     });
 
+    // for column and row victories
     function checkForVictory(slots) {
         var count = 0;
         for (let i = 0; i < slots.length; i++) {
@@ -85,15 +87,20 @@
         };
     }
 
+    // player change
     function switchPlayer() {
         currentPlayer = currentPlayer === "player1" ? "player2" : "player1";
-        console.log("switched the player!", currentPlayer);
     }
+
+    // reload or close?
     function reMatch() {
         if (confirm("Do you want to play again?")) {
             window.location.reload();
+        } else if (currentPlayer === "player1") {
+            window.open("winner-red.html", "blank");
+            window.close();
         } else {
-            window.open("winner.html", "blank");
+            window.open("winner-yellow.html", "blank");
             window.close();
         }
     }

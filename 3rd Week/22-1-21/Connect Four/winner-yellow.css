@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #20ffff;
+    /* background: linear-gradient(35deg, #ccffff, #ffcccc); */
+}
+
+#winner {
+    border: 1px solid black;
+    display: none;
+    margin: 0;
+}
+.congrats {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+    align-items: center;
+    color: #000;
+    left: 50%;
+    font-size: xx-large;
+}
+
+.confetti-container {
+    display: flex;
+    height: auto;
+    justify-content: space-around;
+}
+
+img {
+    border: 2px solid black;
+}
