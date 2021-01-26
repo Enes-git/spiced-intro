@@ -49,32 +49,31 @@
         $(event.currentTarget).removeClass("highlight");
     })
 
-    resultsToShow.on("mousedown", "div", function (event) {     // NEED WORK
+    resultsToShow.on("mousedown", "div", function (event) {
         var clickedInput = $(event.currentTarget);
-
-        console.log('clickedInput :>> ', clickedInput);     // getting an obj with 1 div
-        inputField.html(clickedInput.eq(0).val());
+        // console.log('clickedInput :>> ', clickedInput);    
+        inputField.val(clickedInput.html());
     })
 
-    $("html").on("keydown", function (event) {  //
+    $("html").on("keydown", function (event) {
         // console.log("document selected");
-        for (var k = 0; k < resultsToShow.length; k++) {
-            if (!resultsToShow[k].hasClass(".highlight")) {
-                $(event.currentTarget).addClass(".highlight")
+        var divs = $(".countries");         // need to store them after they are assigned
+        // console.log('divs :>> ', divs);
+        var indexNum = 0;
+        for (var i = 0; i < divs.length; i++) {
+            if (divs.eq(i).hasClass(".highlight")) {
+                indexNum = i;
             }
         }
 
+        if (event.keyCode === 38) { // arrow up
+            // console.log('event.keyCode working :>> ');
+            divs.eq(indexNum - 1).addClass(".highlight");
+        } else if (event.keyCode === 40) {  //arrow down
+            divs.eq(indexNum + 1).addClass(".highlight");
+        }
+
     })
-
-
-
-
-
-
-
-
-
-
 
 
 
