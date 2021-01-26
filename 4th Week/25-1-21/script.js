@@ -63,15 +63,36 @@
         for (var i = 0; i < divs.length; i++) {
             if (divs.eq(i).hasClass(".highlight")) {
                 indexNum = i;
+            } else {
+                break;
             }
         }
+        console.log('numIndex :>> ', indexNum);                 // get only 0
 
         if (event.keyCode === 38) { // arrow up
             // console.log('event.keyCode working :>> ');
-            divs.eq(indexNum - 1).addClass(".highlight");
+            divs.eq(indexNum - 1).addClass("highlight");
         } else if (event.keyCode === 40) {  //arrow down
-            divs.eq(indexNum + 1).addClass(".highlight");
+            divs.eq(indexNum + 1).addClass("highlight");        // TOTALLY LOST!!
         }
+
+
+        for (var j = 0; j < divs.length; j++) {
+            if (divs.eq(j).hasClass(".highlight")) {
+                if (event.keyCode === 40) {
+                    divs.eq(j + 1).addClass("highlight");
+                } else if (event.keyCode === 38) {
+                    divs.eq(j - 1).addClass("highlight");
+                }
+            } else {
+                if (event.keyCode === 40) {
+                    divs.eq(j).addClass("highlight");
+                } else if (event.keyCode === 38) {
+                    divs.eq(3 - j).addClass("highlight");
+                }
+            }
+        }
+
 
     })
 
