@@ -1,0 +1,21 @@
+.results {
+    display: flex;
+    flex-direction: column;
+}
+.results > div {
+    /* display: inline-block; */
+    float: left;
+}
+img {
+    height: 10vw;
+    width: 10vw;
+    /* float: left; */
+}
+/* .results-container {
+    display: flex;
+    flex-direction: column;
+} */
+.more-button {
+    left: 50%;
+    visibility: hidden;
+}
