@@ -53,45 +53,37 @@
         var clickedInput = $(event.currentTarget);
         // console.log('clickedInput :>> ', clickedInput);    
         inputField.val(clickedInput.html());
+        resultsToShow.html("");
     })
 
     $("html").on("keydown", function (event) {
         // console.log("document selected");
         var divs = $(".countries");         // need to store them after they are assigned
         // console.log('divs :>> ', divs);
-        var indexNum = 0;
-        for (var i = 0; i < divs.length; i++) {
-            if (divs.eq(i).hasClass(".highlight")) {
-                indexNum = i;
-            } else {
-                break;
-            }
-        }
-        console.log('numIndex :>> ', indexNum);                 // get only 0
 
-        if (event.keyCode === 38) { // arrow up
+        if (event.keyCode === 38) {
+            // arrow up
             // console.log('event.keyCode working :>> ');
-            divs.eq(indexNum - 1).addClass("highlight");
-        } else if (event.keyCode === 40) {  //arrow down
-            divs.eq(indexNum + 1).addClass("highlight");        // TOTALLY LOST!!
-        }
-
-
-        for (var j = 0; j < divs.length; j++) {
-            if (divs.eq(j).hasClass(".highlight")) {
-                if (event.keyCode === 40) {
-                    divs.eq(j + 1).addClass("highlight");
-                } else if (event.keyCode === 38) {
-                    divs.eq(j - 1).addClass("highlight");
-                }
+            if ($(".highlight").length === 0) {
+                divs.eq(3).addClass("highlight");
             } else {
-                if (event.keyCode === 40) {
-                    divs.eq(j).addClass("highlight");
-                } else if (event.keyCode === 38) {
-                    divs.eq(3 - j).addClass("highlight");
-                }
+                $(".highlight").prev().addClass("highlight");
+                $(".highlight").next().removeClass("highlight");
             }
+        } else if (event.keyCode === 40) {
+            //arrow down
+            if ($(".highlight").length === 0) {
+                divs.eq(0).addClass("highlight");
+            } else {
+                $(".highlight").next().addClass("highlight");
+                $(".highlight").prev().removeClass("highlight");
+            }
+        } else if (event.keyCode === 13) {
+            inputField.val($(".highlight").html());
+            resultsToShow.html("");
         }
+
+
 
 
     })

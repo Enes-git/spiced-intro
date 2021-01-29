@@ -1,5 +1,5 @@
 .highlight {
     background-color: rgba(211, 239, 248, 0.548);
-    width: 18vmax;
+    width: fit-content;
     border: 2px solid rgb(235, 172, 165);
 }
