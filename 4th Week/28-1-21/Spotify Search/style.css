@@ -2,20 +2,32 @@
     display: flex;
     flex-direction: column;
 }
-.results > div {
-    /* display: inline-block; */
-    float: left;
+a {
+    display: flex;
 }
 img {
     height: 10vw;
     width: 10vw;
-    /* float: left; */
+    margin: 1vw;
 }
-/* .results-container {
-    display: flex;
-    flex-direction: column;
-} */
+a div {
+    margin: 1vw;
+    align-items: center;
+}
+h3 {
+    margin: 1vw;
+}
 .more-button {
+    display: inline-block;
     left: 50%;
     visibility: hidden;
 }
+
+/* .results div {
+    float: right;
+    
+}
+.results-container {
+    display: flex;
+    flex-direction: column;
+} */

@@ -19,6 +19,9 @@
                 var resultsHtml = "";
                 if (response.items.length == 0) {
                     resultsHtml += "There is no " + userSelection + " in this name!"
+                } else {
+                    resultsHtml += "<h3>Results for " + userInput.charAt(0).toUpperCase() + userInput.slice(1) + "</h3>";
+
                 }
                 // var resultsHtmlContainer;
                 for (var i = 0; i < response.items.length; i++) {
