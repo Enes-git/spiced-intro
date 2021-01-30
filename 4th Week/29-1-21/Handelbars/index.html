@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Handlebars</title>
+    </head>
+    <body>
+        <h1>Three Novelteers</h1>
+
+        <div class="authors-infos"></div>
+
+        <script id="authors" type="text/x-handlebars-template">
+            {{#authors}}
+                <div class="card">
+                    <h2>
+                        {{name}}
+                    </h2>
+                    <h3>
+                        Lifetime: {{born}} - {{died}}
+                    </h3>
+                    <h4>
+                        Popular Books:
+                    </h4>
+                    <ul>
+                        {{#selectedWritings}}
+                            <li>
+                                {{this}}
+                            </li>
+                        {{/selectedWritings}}
+                    </ul>
+                    <p>
+                        <span>
+                            "
+                        </span>
+                        {{quote}}<span>
+                            "
+                        </span>
+                    </p>
+                    <img src="{{photo}}" alt="" />
+                </div>
+            {{/authors}}
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
