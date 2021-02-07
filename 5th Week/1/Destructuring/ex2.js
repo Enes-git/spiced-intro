@@ -5,3 +5,8 @@ const reverser = function (array1, array2) {
 const myArray1 = [1, 2, 3, 4];
 const myArray2 = [5, 6, 7, 8];
 console.log(reverser(myArray1, myArray2), myArray1, myArray2);
+
+// ANSWER ***************
+function concat(a, b) {
+    return [...a, ...b];
+}

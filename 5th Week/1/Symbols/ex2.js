@@ -11,3 +11,14 @@ var it1 = iterator.next();
 console.log('it1 :>> ', it1);
 var it2 = iterator.next();
 console.log('it2 :>> ', it2);
+
+
+
+// ANSWER **************
+
+function* reverse(original) {
+    const clone = [...original];
+    while (clone.length) {
+        yield clone.pop();
+    }
+}

@@ -11,3 +11,11 @@ function logInfo(city) {
     );
 }
 logInfo(berlin);
+
+// ANSWER ***********
+function logInfo(city) {
+    const { name, country, population: numPeople } = city;
+    console.log(
+        `${name} is in ${country} and has ${numPeople} in it.`
+    );
+}

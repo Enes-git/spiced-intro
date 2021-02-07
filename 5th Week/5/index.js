@@ -43,7 +43,7 @@ http.createServer((request, response) => {
         if (request.url == '/') {
             response.statusCode = 202;
             response.setHeader('content-type', 'text/html');
-            response.end(projectsModule.projectsOwerview(requestedPath));
+            response.end(projectsModule.projectsOwerview());
         }
     }
     // console.log(__dirname + "/projects/Connect 4/indir.gif");

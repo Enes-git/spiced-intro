@@ -22,3 +22,25 @@ var getRelocatedCity = function (city1, city2) {
 cityB = { name: "İstanbul", country: "Turkey" };
 cityC = { name: "Berlin" };
 console.log(getRelocatedCity(cityA, cityC));
+
+// ANSWER ********************
+var getNameAndCountry = function (city) {
+    return [city.name, city.country];
+};
+
+var getRelocatedCity = function (city1, city2) {
+    if (typeof city2 == 'undefined') {
+        city2 = {
+            country: 'Germany'
+        };
+    }
+    var country = getNameAndCountry(city2)[1];
+
+    var relocatedCity = {};
+    for (var key in city1) {
+        relocatedCity[key] = city1[key];
+    }
+    relocatedCity.country = country;
+
+    return relocatedCity;
+};
