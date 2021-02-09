@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+}
+
+.kitty-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden; /*hide offscreen and fit them in container height*/
+}
+
+.kitty-container img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(100%);
+}
+
+.kitty-container img.onscreen {
+    transform: translateX(0);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.kitty-container img.exit {
+    transform: translateX(-100%);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+
+.dot-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dots {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: 1vw;
+    /* cursor: pointer;                  if you prefer cancelling the cursor  */
+}
+
+.on {
+    background-color: #fff;
+    transition-duration: 1.5s;
+    /* pointer-events: none;               if you prefer cancelling the cursor  */
+}
+
+@madia screen and (max-width: 720px) {
+    .kitty-container {
+        height: 100%;
+        width: 100%;
+    }
+}
