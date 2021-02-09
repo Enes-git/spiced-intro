@@ -1,0 +1,9 @@
+/* body {
+    background-image: url('./main-bcg.jpg');
+    background-image
+} */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

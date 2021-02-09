@@ -1,0 +1,18 @@
+[
+    {
+        "projectName": "Connect 4",
+        "projectDir": "connect4"
+    },
+    {
+        "projectName": "Kitty Carousel",
+        "projectDir": "kittyCarousel"
+    },
+    {
+        "projectName": "Ticker",
+        "projectDir": "ticker"
+    },
+    {
+        "projectName": "Spiced",
+        "projectDir": "spiced"
+    }
+]
