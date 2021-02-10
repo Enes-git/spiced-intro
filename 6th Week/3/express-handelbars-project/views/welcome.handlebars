@@ -1,0 +1,16 @@
+<div class="header">
+    <h1>Welcome Stranger</h1>
+    <h3>Here you can find my projects</h3>
+</div>
+<main>
+    <div class="left-menu">
+        {{#myProjects}}
+            <a href="/{{projectDir}}/description"><li>{{projectName}}</li></a>
+        {{/myProjects}}
+    </div>
+    <div class="main-content">
+        {{#myProjects}}
+        <a href="/{{projectDir}}/description">{{>projectList}}</a>
+        {{/myProjects}}
+    </div>
+</main>

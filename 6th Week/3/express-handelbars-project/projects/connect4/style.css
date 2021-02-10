@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+}
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 3vh;
+    font-style: oblique;
+    animation-name: moveInLeft;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+}
+
+#span1 {
+    color: red;
+    animation-name: moveInDown;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+}
+
+#span2 {
+    color: rgb(243, 243, 4);
+    animation-name: moveInDown;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.hole {
+    width: 80px;
+    height: 80px;
+    border: 40px solid blue;
+    border-radius: 50%;
+    transform: translate(-30px, -30px);
+}
+
+.player1 {
+    background-color: red;
+}
+
+.player2 {
+    background-color: yellow;
+}
+
+/* Header Animations */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-300px);
+    }
+
+    80% {
+        transform: translate(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInDown {
+    0% {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+
+    80% {
+        transform: translate(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

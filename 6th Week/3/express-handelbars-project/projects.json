@@ -1,0 +1,22 @@
+[
+    {
+        "projectName": "Connect 4",
+        "projectDir": "connect4",
+        "description": "A popular board game which I was not familiar with before I dive into this project. I am proud of this project nevertheless have one regret. I would love to write a function for the diagonal victory check othern than hard coded one!"
+    },
+    {
+        "projectName": "Kitty Carousel",
+        "projectDir": "kittyCarousel",
+        "descriptin": "Eventhough carousels are useless it was interesting to learn about them and apply it in a project. Just enjoy the flowing kitties!"
+    },
+    {
+        "projectName": "Ticker",
+        "projectDir": "ticker",
+        "description": "This was the first project that seemed complex to me. Luckily I managed to make it work."
+    },
+    {
+        "projectName": "Spiced",
+        "projectDir": "spiced",
+        "description": "The first project we made. Just a single page but shiny!"
+    }
+]

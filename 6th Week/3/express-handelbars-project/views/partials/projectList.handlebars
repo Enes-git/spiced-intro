@@ -1,0 +1,15 @@
+{{!-- check to see if there is a project name to render the screenshots for description page
+if yes serve the ss + name 
+if no serve name + description --}}
+
+{{#myProjects}}
+    {{#if request.param.project}}
+    {{!-- this is description route, serve description --}}
+    <p class="description">{{description}}</p>
+    {{else}}
+    {{!-- this is welcome route serve ss --}}
+    <img src="/{{projectDir}}/screenshot.png" alt="{{projectName}} Screenshot">
+    {{/if}}
+{{/myProjects}}
+
+

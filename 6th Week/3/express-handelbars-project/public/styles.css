@@ -1,0 +1,46 @@
+body {
+    background-image: url('./main-bcg.jpg');
+    background-size: 100%;
+
+    background-repeat: no-repeat;
+    color: white;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main {
+    display: flex;
+    margin: 2vw;
+}
+.left-menu a {
+    color: white;
+    text-decoration: none;
+}
+.left-menu a li {
+    display: flex;
+    align-items: center;
+    padding: 0.5vw;
+}
+.left-menu li:hover {
+    border: 2px solid white;
+    color: blue;
+}
+.main-content {
+    display: flex;
+    align-items: center;
+    margin: 3vw;
+}
+.main-content img {
+    padding: 2vw;
+    width: 15vw;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 10vh;
+    margin: 2vw;
+    padding: 2vw;
+}
