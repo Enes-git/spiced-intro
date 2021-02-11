@@ -14,7 +14,10 @@ app.get('/data.json', (req, res) => {
     getToken((err, bearerToken) => {
         console.log('inside the callback of getToken in index.js');
         if (err) {
-            console.log('ohooho sth went wrong in getToken:', err);
+            console.log(
+                'ho ho ho! sth went wrong in getToken in index.js:',
+                err
+            );
             res.sendStatus(500); // server error
         } else {
             console.log('we have a token yayyyy:', bearerToken);

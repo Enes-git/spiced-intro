@@ -81,7 +81,7 @@ module.exports.getTweets = function getTweets(bearerToken, callbackTweets) {
             // console.log("unparsedTweets:", unparsedTweets);
             let parsedTweets = JSON.parse(unparsedTweets);
             // console.log('parsedTweets:', parsedTweets);
-            // console.log('entities :>> ', parsedTweets[0].entities);
+            // console.log('entities :>> ', parsedTweets[1].entities);
             // all went good we are passing null, and the actual token to our callbackToken
             // function
             callbackTweets(null, parsedTweets);
@@ -94,14 +94,21 @@ module.exports.getTweets = function getTweets(bearerToken, callbackTweets) {
 module.exports.filterTweets = function filterTweets(tweets) {
     // this function will clean up(filter) our tweet response from the twitter API
     // this is also for you to complete :)
-    const tweetUrls = [];
+    const tickerTweets = [];
     for (let i = 0; i < tweets.length; i++) {
         let currentTweetUrls = tweets[i].entities.urls;
-        if (currentTweetUrls.length == 1) {
-            console.log('one url :>> ', currentTweetUrls);
-            tweetUrls.push(currentTweetUrls[0].url);
+        let currentTweetText = tweets[i].full_text;
+
+        if (currentTweetUrls.length == 1 && tweets[i].entities.media) {
+            const tweetUrls = {};
+            // console.log('one url :>> ', tweets[i].entities);
+            tweetUrls.href = currentTweetUrls[0].url;
+            tweetUrls.name = currentTweetText;
+            tickerTweets.push(tweetUrls);
+            console.log('tweetUrls :>> ', tweetUrls);
         }
     }
-    console.log('tweetUrls :>> ', tweetUrls);
-    return tweetUrls;
+    // console.log('tweetUrls :>> ', tweetUrls);
+    console.log('tickerTweets :>> ', tickerTweets);
+    return tickerTweets;
 };
