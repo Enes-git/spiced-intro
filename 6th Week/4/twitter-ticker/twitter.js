@@ -80,7 +80,7 @@ module.exports.getTweets = function getTweets(bearerToken, callbackTweets) {
         response.on('end', () => {
             // console.log("unparsedTweets:", unparsedTweets);
             let parsedTweets = JSON.parse(unparsedTweets);
-            // console.log('parsedTweets:', parsedTweets);
+            console.log('parsedTweets:', parsedTweets);
             // console.log('entities :>> ', parsedTweets[1].entities);
             // all went good we are passing null, and the actual token to our callbackToken
             // function
@@ -99,16 +99,22 @@ module.exports.filterTweets = function filterTweets(tweets) {
         let currentTweetUrls = tweets[i].entities.urls;
         let currentTweetText = tweets[i].full_text;
 
-        if (currentTweetUrls.length == 1 && tweets[i].entities.media) {
+        if (
+            currentTweetUrls.length == 1 &&
+            typeof tweets[i].entities.media == 'undefined'
+        ) {
             const tweetUrls = {};
             // console.log('one url :>> ', tweets[i].entities);
             tweetUrls.href = currentTweetUrls[0].url;
-            tweetUrls.name = currentTweetText;
+            tweetUrls.name = currentTweetText.replace(
+                currentTweetUrls[0].url,
+                '    '
+            );
             tickerTweets.push(tweetUrls);
-            console.log('tweetUrls :>> ', tweetUrls);
+            // console.log('tweetUrls :>> ', tweetUrls);
         }
     }
     // console.log('tweetUrls :>> ', tweetUrls);
-    console.log('tickerTweets :>> ', tickerTweets);
+    // console.log('tickerTweets :>> ', tickerTweets);
     return tickerTweets;
 };

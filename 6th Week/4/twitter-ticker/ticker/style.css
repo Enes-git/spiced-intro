@@ -17,6 +17,7 @@ body {
     white-space: nowrap;
     position: absolute;
     left: 100%;
+    /* padding: 2vw; */
 }
 
 #videos-container a {
