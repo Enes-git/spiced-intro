@@ -20,6 +20,7 @@ app.get('/data.json', (req, res) => {
             console.log('we have a token yayyyy:', bearerToken);
             //2. make a request for tweets using the token
             getTweets(bearerToken, (err, tweets) => {
+                //cons log tweets!!
                 //3. filter the tweets we got in step 2.
                 const filteredTweets = filterTweets(tweets);
                 //4. send back those filtered tweeets as json to the client side

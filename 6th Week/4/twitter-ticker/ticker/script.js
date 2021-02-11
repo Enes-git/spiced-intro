@@ -1,9 +1,9 @@
 (function () {
     var config = {
-        url: "/hrefData.json",
-        method: "GET",
+        url: '/data.json',
+        method: 'GET',
         success: function (responseData) {
-            var myHtml = "";
+            var myHtml = '';
             //var myHref = "";
             for (var i = 0; i < responseData.length; i++) {
                 // myHtml += "<p>" + responseData[i].name + "</p>";
@@ -12,34 +12,34 @@
                     responseData[i].href +
                     '">' +
                     responseData[i].name +
-                    "</a>";
+                    '</a>';
                 // console.log("success in:", i, responseData[i].name);
                 // console.log("success in:", i, responseData[i].href);
             }
             // console.log("myHtml:", myHtml);
             // console.log("myHref:", myHtml);
 
-            $("#videos-container").html(myHtml);
+            $('#videos-container').html(myHtml);
         },
         error: function (error) {
-            console.log("error in ajax:", error);
+            console.log('error in ajax:', error);
         },
     };
     var linksData = $.ajax(config); // recieved data in parsed format!
     //linksData.on("readystatechange", function () {});
-    console.log("myData:", linksData);
+    console.log('myData:', linksData);
     /*console.log(linksData[0].name);*/
 
-    var videos = $("#videos-container");
-    var links = $("a");
+    var videos = $('#videos-container');
+    var links = $('a');
     var leftPosition = videos.offset().left;
     var requestId;
 
     for (var i = 0; i < links.length; i++) {
-        links[i].on("mouseenter", function () {
+        links[i].on('mouseenter', function () {
             cancelAnimationFrame(requestId);
         });
-        links[i].on("mouseleave", function () {
+        links[i].on('mouseleave', function () {
             requestAnimationFrame(moveLeftAnimation);
         });
     }
@@ -54,7 +54,7 @@
             videos.appendChild(links.eq(0));
         }
 
-        videos.css({ left: leftPosition + "px" });
+        videos.css({ left: leftPosition + 'px' });
         requestId = requestAnimationFrame(moveLeftAnimation);
     }
 
